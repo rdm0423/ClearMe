@@ -7,6 +7,7 @@
 //
 
 #import "CMAppDelegate.h"
+#import "CMViewController.h"
 
 @implementation CMAppDelegate
 
@@ -14,7 +15,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    CMViewController *viewController = [CMViewController new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navigationController;
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
