@@ -8,6 +8,7 @@
 
 #import "CMAppDelegate.h"
 #import "CMViewController.h"
+#import "CMClearFieldViewController.h"
 
 @implementation CMAppDelegate
 
@@ -18,7 +19,11 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    CMViewController *viewController = [CMViewController new];
+//    CMViewController *viewController = [CMViewController new];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    self.window.rootViewController = navigationController;
+    
+    CMClearFieldViewController *viewController = [CMClearFieldViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
     
